@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Softhouse NFC application</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="description">Layout for telling user that nfc is inactive</string>
+    <string name="Nfc_settings">This application requires Near Field Communication which is not activated on this device, please press \&quot;Activate NFC\&quot; to enable NFC.</string>
+    <string name="title_activity_read_tag_to_text">Read content to text</string>
+    <string name="title_activity_write_to_tag">Write to tag</string>
+    <string name="write_to_tag">Choose item to write to tag.</string>
+    <string name="title_activity_write_sms">Write SMS to tag</string>
+    <string name="title_activity_write_email">Write email to tag</string>
+    <string name="SMStext">Enter phone number.</string>
+    <string name="SMStext2">Enter message.</string>
+    <string name="Write">Write to tag</string>
+    <string name="EmailText1">Enter email address.</string>
+    <string name="EmailText2">Enter subject.</string>
+    <string name="EmailText3">Enter message.</string>
+    <string name="title_activity_writing_tags">Writing Tag</string>
+    <string name="title_activity_format_tag">Format Tag</string>
+    <string name="formatText">To format the tag to hold NDEF specifications and message tap format at the bottom.</string>
+    <string name="formatButton">Tap to format</string>
+    <string name="eraseText">To erase all content on the tag making it empty, tap erase content below.</string>
+    <string name="eraseButton">Erase content</string>
+    <string name="title_activity_format">Format</string>
+    <string name="title_activity_erase">Erase</string>
+    <string name="formatText2">Tap tag to touchpoint to format tag.</string>
+    <string name="eraseText2">Tap tag to touchpoint to erase all content.</string>
+    <string name="title_activity_lock_tag">Lock Tag</string>
+    <string name="lockText">Tap tag to touchpoint to lock tag (This is a one way operation and is not reversible).</string>
+    <string name="title_activity_write_wifi">Write wifi network to tag</string>
+    <string name="title_activity_read_wifi">Read Wifi</string>
+    <string name="wifiSSID">Enter wifi networks SSID</string>
+    <string name="wifiPassword">Enter wifi networks password</string>
+    <string name="writeButton">Write to Tag</string>
+    <string name="readButton">Read Tag to Text</string>
+    <string name="formatButtonFrontpage">Format Tag</string>
+    <string name="lockButton">Lock Tag</string>
+    <string name="title_activity_about_nfc">About Nfc</string>
+    <string name="aboutText">Near Field Communications (NFC) is a protocol for communication between two components one passive and one active. The communication functions on short distances, less than 5 cm.\n This program can Read/Program/Format and Lock tags.\n\n The functions that can be written to tag is SMS,Email and Wifi networks.\n Format of tag only works when tag is not ready to handle Ndef format.\n Locking a tag makes it locked and is not writeable again.</string>
+    <string name="aboutLink">To check tag chip compatibility with your phone here is a link for Mifare 1k, Mifare ultralight and nTag.</string>
+	<string name="link">http://www.shopnfc.it/en/content/7-nfc-device-compatibility</string>
+    <string name="writeWifi">Writing wifi to tags can be done by using this app or on new android 5.0 and forward it can be done by long pressing a network in the network list and write to tag will pop up. This method only works for Android 5.0 and higher.</string>
+
+</resources>

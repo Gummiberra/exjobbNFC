@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.exjobb.nfc"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Frontpage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.exjobb.ReadTag.ReadTagToText"
+            android:label="@string/title_activity_read_tag_to_text"
+            android:parentActivityName=".Frontpage"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIITY"
+                android:value=".Frontpage" />
+        </activity>
+        <activity
+            android:name="com.example.exjobb.WriteItemList.WriteToTag"
+            android:label="@string/title_activity_write_to_tag"
+            android:parentActivityName=".Frontpage"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Frontpage" />
+        </activity>
+        <activity
+            android:name="com.example.exjobb.Sms.WriteSMS"
+            android:label="@string/title_activity_write_sms"
+            android:parentActivityName="com.example.exjobb.WriteItemList.WriteToTag"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="WriteToTag" />
+        </activity>
+        <activity
+            android:name="com.example.exjobb.Mail.WriteEmail"
+            android:label="@string/title_activity_write_email"
+            android:parentActivityName="com.example.exjobb.WriteItemList.WriteToTag"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="WriteToTag" />
+        </activity>
+        <activity
+            android:name="com.example.exjobb.format.FormatTag"
+            android:label="@string/title_activity_format_tag"
+            android:parentActivityName=".Frontpage"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="Frontpage" />
+        </activity>
+        <activity
+            android:name="com.example.exjobb.format.Format"
+            android:label="@string/title_activity_format"
+            android:parentActivityName="com.example.exjobb.format.FormatTag"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="FormatTag" />
+        </activity>
+        <activity
+            android:name="com.example.exjobb.format.Erase"
+            android:label="@string/title_activity_erase"
+            android:parentActivityName="com.example.exjobb.format.FormatTag"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="FormatTag" />
+        </activity>
+        <activity
+            android:name="com.example.exjobb.format.LockTag"
+            android:label="@string/title_activity_lock_tag"
+            android:parentActivityName=".Frontpage"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="Frontpage" />
+        </activity>
+        <activity
+            android:name="com.example.exjobb.Wifi.ReadWifi"
+            android:label="@string/title_activity_read_wifi"
+            android:parentActivityName=".Frontpage"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="nfcapp/wifi" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="Frontpage" />
+        </activity>
+        <activity
+            android:name="com.example.exjobb.Wifi.WriteWifi"
+            android:label="@string/title_activity_write_wifi" 
+            android:parentActivityName="com.example.exjobb.WriteItemList.WriteToTag" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.exjobb.WriteItemList.WriteToTag" />
+        </activity>
+        <activity
+            android:name="com.example.exjobb.about.AboutNfc"
+            android:label="@string/title_activity_about_nfc"
+            android:parentActivityName=".Frontpage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.exjobb.nfc.Frontpage" />
+        </activity>
+    </application>
+
+</manifest>
